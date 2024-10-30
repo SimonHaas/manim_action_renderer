@@ -28,10 +28,10 @@ fonts_dir="${10}"
 extra_repos="${11}"
 community="${12}"
 
-if [[ "$manim_repo" == "https://github.com/ManimCommunity/manim" || "$manim_repo" == "https://github.com/ManimCommunity/manim/" ]]; then
-  community=true
-fi
-echo "Community? $community"
+# if [[ "$manim_repo" == "https://github.com/ManimCommunity/manim" || "$manim_repo" == "https://github.com/ManimCommunity/manim/" ]]; then
+#   community=true
+# fi
+# echo "Community? $community"
 
 if [[ -z "$source_file" ]]; then
   error "Input 'source_file' is missing."
@@ -47,12 +47,12 @@ if [[ -n $fonts_dir ]]; then
   fc-cache -fv
 fi
 
-info "Cloning $manim_repo ..."
-if [[ $community == true ]]; then
-  git clone "$manim_repo" manimcm --depth=1
-else
-  git clone "$manim_repo" manim --depth=1
-fi
+# info "Cloning $manim_repo ..."
+# if [[ $community == true ]]; then
+#   git clone "$manim_repo" manimcm --depth=1
+# else
+#   git clone "$manim_repo" manim --depth=1
+# fi
 
 merge() {
   if [[ -e $1 && -e $2 ]]; then
@@ -69,22 +69,22 @@ merge() {
   fi
 }
 
-if [[ $merge_assets == true && $community == false ]]; then
-  merge "assets/" "manim/assets/"
-fi
+# if [[ $merge_assets == true && $community == false ]]; then
+#   merge "assets/" "manim/assets/"
+# fi
 
-if [[ $community == true ]]; then
-  mv manimcm/* .
-else
-  mv manim/* .
-fi
+# if [[ $community == true ]]; then
+#   mv manimcm/* .
+# else
+#   mv manim/* .
+# fi
 
-info "Installing requirements of manim..."
-if [[ community == true ]]; then
-  python -m pip install -e .
-else
-  python -m pip install -r requirements.txt
-fi
+# info "Installing requirements of manim..."
+# if [[ community == true ]]; then
+#   python -m pip install -e .
+# else
+#   python -m pip install -r requirements.txt
+# fi
 
 if [[ -n "$extra_system_packages" ]]; then
   for pkg in $extra_system_packages; do

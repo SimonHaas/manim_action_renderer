@@ -13,12 +13,12 @@ inputs:
     description: Arguments to be passed to manim cli
     required: true
     default: -w
-  manim_repo:
-    description: The manim engine repo you want to use to render
-    default: https://github.com/manim-kindergarten/manim
-  community_ver:
-    description: Whether the manim repo is a fork of ManimCommunity/manim or not
-    default: false
+  # manim_repo:
+  #   description: The manim engine repo you want to use to render
+  #   default: https://github.com/manim-kindergarten/manim
+  # community_ver:
+  #   description: Whether the manim repo is a fork of ManimCommunity/manim or not
+  #   default: false
   extra_packages:
     description: Install extra python packages by pip
   extra_system_packages:
@@ -29,9 +29,9 @@ inputs:
     description: Arbitrary bash codes to be executed before rendering
   post_render:
     description: Arbitrary bash codes to be executed after rendering
-  merge_assets:
-    description: If two repo both has assets/ merge it
-    default: true
+  # merge_assets:
+  #   description: If two repo both has assets/ merge it
+  #   default: true
   fonts_dir:
     description: The .ttf files dir relative to this current repo if you want to install extra fonts
 outputs:
