@@ -18,7 +18,7 @@ error() {
 source_file="${1}"
 
 info "Rendering..."
-python -m manim "$source_file" $sce ${args[@]} manim demo-manim.py VoiceoverDemo -qm
+manim "$source_file" -qm
 if [ $? -ne 0 ]; then
   error "manim render error"
 fi
