@@ -29,5 +29,5 @@ USER manimuser
 
 
 
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
+#COPY entrypoint.sh /entrypoint.sh
+#ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
