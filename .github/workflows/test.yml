@@ -9,7 +9,7 @@ jobs:
   test-mkver:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Test rendering example_scenes.py
         uses: ./
         id: renderer
@@ -28,7 +28,7 @@ jobs:
   test-cmver:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Test Community version
         uses: ./
         id: renderer
@@ -48,7 +48,7 @@ jobs:
   test-3b1bver:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Test rendering example_scenes.py
         uses: ./
         id: renderer
@@ -68,7 +68,7 @@ jobs:
   test-other-types:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Test rendering example_scenes.py
         uses: ./
         id: renderer
