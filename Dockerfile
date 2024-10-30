@@ -8,6 +8,7 @@ USER root
 
 RUN apt-get update && \
     apt-get install -y \
+        git \
         libportaudio2 \
         libportaudiocpp0 \
         portaudio19-dev \
