@@ -5,7 +5,7 @@ class WriteStuff(Scene):
     def construct(self):
         example_text = Text(
             "This is some text",
-            font="Consolas"
+          #  font="Consolas"
         )
         example_tex = TexMobject(
             "\\sum_{k=1}^\\infty {1 \\over k^2} = {\\pi^2 \\over 6}",

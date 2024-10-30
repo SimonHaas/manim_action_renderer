@@ -37,15 +37,15 @@ if [[ -z "$source_file" ]]; then
   error "Input 'source_file' is missing."
 fi
 
-if [[ -n $fonts_dir ]]; then
-  info "Adding fonts..."
-  cp -r "$fonts_dir" /usr/share/fonts/custom
-  ls /usr/share/fonts/custom
-  apt install fontconfig -y
-  mkfontscale
-  mkfontdir
-  fc-cache -fv
-fi
+# if [[ -n $fonts_dir ]]; then
+#   info "Adding fonts..."
+#   cp -r "$fonts_dir" /usr/share/fonts/custom
+#   ls /usr/share/fonts/custom
+#   apt install fontconfig -y
+#   mkfontscale
+#   mkfontdir
+#   fc-cache -fv
+# fi
 
 # info "Cloning $manim_repo ..."
 # if [[ $community == true ]]; then
