@@ -20,7 +20,7 @@ jobs:
           fonts_dir: test/fonts/
           extra_repos: "https://github.com/manim-kindergarten/manim_sandbox"
       - name: Save output as artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: Videos_mkver
@@ -40,7 +40,7 @@ jobs:
           manim_repo: "https://github.com/ManimCommunity/manim"
           community_ver: true
       - name: Save output as artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: Videos_cmver
@@ -60,7 +60,7 @@ jobs:
           manim_repo: "https://github.com/3b1b/manim"
           extra_repos: "https://github.com/manim-kindergarten/manim_sandbox"
       - name: Save output as artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: Videos_3b1bver
@@ -79,7 +79,7 @@ jobs:
           fonts_dir: test/fonts/
           extra_repos: "https://github.com/manim-kindergarten/manim_sandbox"
       - name: Save output as artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: success()
         with:
           name: OtherTypeOutputs
